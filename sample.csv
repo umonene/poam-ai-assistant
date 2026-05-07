@@ -1,0 +1,3 @@
+Finding ID,System Name,Severity,Finding Description
+1,Server1,High,OpenSSL outdated
+2,Server2,Medium,Weak password policy

@@ -1,0 +1,1349 @@
+Plugin ID,CVE,CVSS v2.0 Base Score,Risk,Host,Protocol,Port,Name,Synopsis,Description,Solution,See Also,Plugin Output,STIG Severity,CVSS v4.0 Base Score,CVSS v4.0 Base+Threat Score,CVSS v3.0 Base Score,CVSS v2.0 Temporal Score,CVSS v3.0 Temporal Score,VPR Score,EPSS Score,Risk Factor,BID,XREF,MSKB,Plugin Publication Date,Plugin Modification Date,Metasploit,Core Impact,CANVAS
+"10107","","","None","192.168.150.17","tcp","80","HTTP Server Type and Version","A web server is running on the remote host.","This plugin attempts to determine the type and the version of the
+  remote web server.","n/a","","The remote web server type is :
+
+Apache/2.4.37 (Red Hat Enterprise Linux) OpenSSL/1.1.1k","","","","","","","","","None","","IAVT:0001-T-0931","","2000/01/04","2020/10/30","","",""
+"10107","","","None","192.168.150.17","tcp","443","HTTP Server Type and Version","A web server is running on the remote host.","This plugin attempts to determine the type and the version of the
+  remote web server.","n/a","","The remote web server type is :
+
+Apache","","","","","","","","","None","","IAVT:0001-T-0931","","2000/01/04","2020/10/30","","",""
+"10107","","","None","192.168.150.17","tcp","8443","HTTP Server Type and Version","A web server is running on the remote host.","This plugin attempts to determine the type and the version of the
+  remote web server.","n/a","","The remote web server type is :
+
+Apache/2.4.37 (Red Hat Enterprise Linux) OpenSSL/1.1.1k","","","","","","","","","None","","IAVT:0001-T-0931","","2000/01/04","2020/10/30","","",""
+"10107","","","None","192.168.150.17","tcp","8834","HTTP Server Type and Version","A web server is running on the remote host.","This plugin attempts to determine the type and the version of the
+  remote web server.","n/a","","The remote web server type is :
+
+NessusWWW","","","","","","","","","None","","IAVT:0001-T-0931","","2000/01/04","2020/10/30","","",""
+"10107","","","None","192.168.150.17","tcp","8837","HTTP Server Type and Version","A web server is running on the remote host.","This plugin attempts to determine the type and the version of the
+  remote web server.","n/a","","The remote web server type is :
+
+Apache","","","","","","","","","None","","IAVT:0001-T-0931","","2000/01/04","2020/10/30","","",""
+"10147","","","None","192.168.150.17","tcp","8834","Nessus Server Detection","A Nessus daemon is listening on the remote port.","A Nessus daemon is listening on the remote port.","Ensure that the remote Nessus installation has been authorized.","https://www.tenable.com/products/nessus/nessus-professional","
+  URL     : https://RHEL8ACAS.wmss.dt.navy.mil:8834/
+  Version : unknown
+","","","","","","","","","None","","IAVT:0001-T-0673","","1999/10/12","2023/02/08","","",""
+"10267","","","None","192.168.150.17","tcp","22","SSH Server Type and Version Information","An SSH server is listening on this port.","It is possible to obtain information about the remote SSH server by
+sending an empty authentication request.","n/a","","
+SSH version : SSH-2.0-OpenSSH_8.0
+SSH supported authentication : publickey,password
+SSH banner : 
+You are accessing a U.S. Government (USG) Information System (IS) that is provided for USG-authorized use only.
+By using this IS (which includes any device attached to this IS), you consent to the following conditions:
+-The USG routinely intercepts and monitors communications on this IS for purposes including, but not limited to, penetration testing, COMSEC monitoring, network operations and defense, personnel misconduct (PM), law enforcement (LE), and counterintelligence (CI) investigations.
+-At any time, the USG may inspect and seize data stored on this IS.
+-Communications using, or data stored on, this IS are not private, are subject to routine monitoring, interception, and search, and may be disclosed or used for any USG-authorized purpose.
+-This IS includes security measures (e.g., authentication and access controls) to protect USG interests--not for your personal benefit or privacy.
+-Notwithstanding the above, using this IS does not constitute consent to PM, LE or CI investigative searching or monitoring of the content of privileged communications, or work product, related to personal representation or services by attorneys, psychotherapists, or clergy, and their assistants. Such communications and work product are private and confidential. See User Agreement for details.
+
+","","","","","","","","","None","","IAVT:0001-T-0933","","1999/10/12","2024/07/24","","",""
+"10302","","","None","192.168.150.17","tcp","443","Web Server robots.txt Information Disclosure","The remote web server contains a 'robots.txt' file.","The remote host contains a file named 'robots.txt' that is intended to
+prevent web 'robots' from visiting certain directories in a website for
+maintenance or indexing purposes.  A malicious user may also be able to
+use the contents of this file to learn of sensitive documents or
+directories on the affected site and either retrieve them directly or
+target them for other attacks.","Review the contents of the site's robots.txt file, use Robots META tags
+instead of entries in the robots.txt file, and/or adjust the web
+server's access controls to limit access to sensitive material.","http://www.robotstxt.org/orig.html","Contents of robots.txt :
+
+User-agent: *
+Disallow: /
+","","","","","","","","","None","","","","1999/10/12","2018/11/15","","",""
+"10881","","","None","192.168.150.17","tcp","22","SSH Protocol Versions Supported","A SSH server is running on the remote host.","This plugin determines the versions of the SSH protocol supported by
+the remote SSH daemon.","n/a","","The remote SSH daemon supports the following versions of the
+SSH protocol :
+
+  - 1.99
+  - 2.0
+","","","","","","","","","None","","","","2002/03/06","2024/07/24","","",""
+"10940","","","None","192.168.150.17","tcp","3389","Remote Desktop Protocol Service Detection","The remote host has an remote desktop protocol service enabled.","The Remote Desktop Protocol allows a user to remotely obtain a graphical
+login (and therefore act as a local user on the remote host).
+
+If an attacker gains a valid login and password, this service could be
+used to gain further access on the remote host.  An attacker may also
+use this service to mount a dictionary attack against the remote host
+to try to log in remotely.
+
+Note that RDP (the Remote Desktop Protocol) is vulnerable to
+Man-in-the-middle attacks, making it easy for attackers to steal the
+credentials of legitimate users by impersonating the Windows server.","Disable the service if you do not use it, and do not allow this
+service to run across the Internet.","","","","","","","","","","","None","","","","2002/04/20","2023/08/21","","",""
+"11011","","","None","192.168.150.17","tcp","139","Microsoft Windows SMB Service Detection","A file / print sharing service is listening on the remote host.","The remote service understands the CIFS (Common Internet File System)
+or Server Message Block (SMB) protocol, used to provide shared access
+to files, printers, etc between nodes on a network.","n/a","","
+An SMB server is running on this port.
+","","","","","","","","","None","","","","2002/06/05","2021/02/11","","",""
+"11011","","","None","192.168.150.17","tcp","445","Microsoft Windows SMB Service Detection","A file / print sharing service is listening on the remote host.","The remote service understands the CIFS (Common Internet File System)
+or Server Message Block (SMB) protocol, used to provide shared access
+to files, printers, etc between nodes on a network.","n/a","","
+A CIFS server is running on this port.
+","","","","","","","","","None","","","","2002/06/05","2021/02/11","","",""
+"11213","CVE-2003-1567","5.0","Medium","192.168.150.17","tcp","80","HTTP TRACE / TRACK Methods Allowed","Debugging functions are enabled on the remote web server.","The remote web server supports the TRACE and/or TRACK methods. TRACE
+and TRACK are HTTP methods that are used to debug web server
+connections.","Disable these HTTP methods. Refer to the plugin output for more information.","http://www.nessus.org/u?e979b5cb
+http://www.apacheweek.com/issues/03-01-24
+https://download.oracle.com/sunalerts/1000718.1.html","
+To disable these methods, add the following lines for each virtual
+host in your configuration file :
+
+    RewriteEngine on
+    RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK)
+    RewriteRule .* - [F]
+
+Alternatively, note that Apache versions 1.3.34, 2.0.55, and 2.2
+support disabling the TRACE method natively via the 'TraceEnable'
+directive.
+
+Nessus sent the following TRACE request : \n\n------------------------------ snip ------------------------------\nTRACE /Nessus381632061.html HTTP/1.1
+Connection: Close
+Host: RHEL8ACAS.wmss.dt.navy.mil
+Pragma: no-cache
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, image/png, */*
+Accept-Language: en
+Accept-Charset: iso-8859-1,*,utf-8
+
+------------------------------ snip ------------------------------\n\nand received the following response from the remote server :\n\n------------------------------ snip ------------------------------\nHTTP/1.1 200 OK
+Date: Thu, 20 Nov 2025 18:47:33 GMT
+Server: Apache/2.4.37 (Red Hat Enterprise Linux) OpenSSL/1.1.1k
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: message/http
+
+TRACE /Nessus381632061.html HTTP/1.1
+Connection: Close
+Host: RHEL8ACAS.wmss.dt.navy.mil
+Pragma: no-cache
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, image/png, */*
+Accept-Language: en
+Accept-Charset: iso-8859-1,*,utf-8
+
+------------------------------ snip ------------------------------\n","","","","5.3","3.7","4.6","","","Medium","9506;9561;11604;33374;37995","CERT:288308;CERT:867593;CWE:16;CWE:200","","2003/01/23","2024/04/09","","",""
+"11213","CVE-2004-2320","5.0","Medium","192.168.150.17","tcp","80","HTTP TRACE / TRACK Methods Allowed","Debugging functions are enabled on the remote web server.","The remote web server supports the TRACE and/or TRACK methods. TRACE
+and TRACK are HTTP methods that are used to debug web server
+connections.","Disable these HTTP methods. Refer to the plugin output for more information.","http://www.nessus.org/u?e979b5cb
+http://www.apacheweek.com/issues/03-01-24
+https://download.oracle.com/sunalerts/1000718.1.html","
+To disable these methods, add the following lines for each virtual
+host in your configuration file :
+
+    RewriteEngine on
+    RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK)
+    RewriteRule .* - [F]
+
+Alternatively, note that Apache versions 1.3.34, 2.0.55, and 2.2
+support disabling the TRACE method natively via the 'TraceEnable'
+directive.
+
+Nessus sent the following TRACE request : \n\n------------------------------ snip ------------------------------\nTRACE /Nessus381632061.html HTTP/1.1
+Connection: Close
+Host: RHEL8ACAS.wmss.dt.navy.mil
+Pragma: no-cache
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, image/png, */*
+Accept-Language: en
+Accept-Charset: iso-8859-1,*,utf-8
+
+------------------------------ snip ------------------------------\n\nand received the following response from the remote server :\n\n------------------------------ snip ------------------------------\nHTTP/1.1 200 OK
+Date: Thu, 20 Nov 2025 18:47:33 GMT
+Server: Apache/2.4.37 (Red Hat Enterprise Linux) OpenSSL/1.1.1k
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: message/http
+
+TRACE /Nessus381632061.html HTTP/1.1
+Connection: Close
+Host: RHEL8ACAS.wmss.dt.navy.mil
+Pragma: no-cache
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, image/png, */*
+Accept-Language: en
+Accept-Charset: iso-8859-1,*,utf-8
+
+------------------------------ snip ------------------------------\n","","","","5.3","3.7","4.6","","","Medium","9506;9561;11604;33374;37995","CERT:288308;CERT:867593;CWE:16;CWE:200","","2003/01/23","2024/04/09","","",""
+"11213","CVE-2010-0386","5.0","Medium","192.168.150.17","tcp","80","HTTP TRACE / TRACK Methods Allowed","Debugging functions are enabled on the remote web server.","The remote web server supports the TRACE and/or TRACK methods. TRACE
+and TRACK are HTTP methods that are used to debug web server
+connections.","Disable these HTTP methods. Refer to the plugin output for more information.","http://www.nessus.org/u?e979b5cb
+http://www.apacheweek.com/issues/03-01-24
+https://download.oracle.com/sunalerts/1000718.1.html","
+To disable these methods, add the following lines for each virtual
+host in your configuration file :
+
+    RewriteEngine on
+    RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK)
+    RewriteRule .* - [F]
+
+Alternatively, note that Apache versions 1.3.34, 2.0.55, and 2.2
+support disabling the TRACE method natively via the 'TraceEnable'
+directive.
+
+Nessus sent the following TRACE request : \n\n------------------------------ snip ------------------------------\nTRACE /Nessus381632061.html HTTP/1.1
+Connection: Close
+Host: RHEL8ACAS.wmss.dt.navy.mil
+Pragma: no-cache
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, image/png, */*
+Accept-Language: en
+Accept-Charset: iso-8859-1,*,utf-8
+
+------------------------------ snip ------------------------------\n\nand received the following response from the remote server :\n\n------------------------------ snip ------------------------------\nHTTP/1.1 200 OK
+Date: Thu, 20 Nov 2025 18:47:33 GMT
+Server: Apache/2.4.37 (Red Hat Enterprise Linux) OpenSSL/1.1.1k
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: message/http
+
+TRACE /Nessus381632061.html HTTP/1.1
+Connection: Close
+Host: RHEL8ACAS.wmss.dt.navy.mil
+Pragma: no-cache
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, image/png, */*
+Accept-Language: en
+Accept-Charset: iso-8859-1,*,utf-8
+
+------------------------------ snip ------------------------------\n","","","","5.3","3.7","4.6","","","Medium","9506;9561;11604;33374;37995","CERT:288308;CERT:867593;CWE:16;CWE:200","","2003/01/23","2024/04/09","","",""
+"11213","CVE-2003-1567","5.0","Medium","192.168.150.17","tcp","8443","HTTP TRACE / TRACK Methods Allowed","Debugging functions are enabled on the remote web server.","The remote web server supports the TRACE and/or TRACK methods. TRACE
+and TRACK are HTTP methods that are used to debug web server
+connections.","Disable these HTTP methods. Refer to the plugin output for more information.","http://www.nessus.org/u?e979b5cb
+http://www.apacheweek.com/issues/03-01-24
+https://download.oracle.com/sunalerts/1000718.1.html","
+To disable these methods, add the following lines for each virtual
+host in your configuration file :
+
+    RewriteEngine on
+    RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK)
+    RewriteRule .* - [F]
+
+Alternatively, note that Apache versions 1.3.34, 2.0.55, and 2.2
+support disabling the TRACE method natively via the 'TraceEnable'
+directive.
+
+Nessus sent the following TRACE request : \n\n------------------------------ snip ------------------------------\nTRACE /Nessus816417898.html HTTP/1.1
+Connection: Close
+Host: RHEL8ACAS.wmss.dt.navy.mil
+Pragma: no-cache
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, image/png, */*
+Accept-Language: en
+Accept-Charset: iso-8859-1,*,utf-8
+
+------------------------------ snip ------------------------------\n\nand received the following response from the remote server :\n\n------------------------------ snip ------------------------------\nHTTP/1.1 200 OK
+Date: Thu, 20 Nov 2025 18:47:32 GMT
+Server: Apache/2.4.37 (Red Hat Enterprise Linux) OpenSSL/1.1.1k
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: message/http
+
+TRACE /Nessus816417898.html HTTP/1.1
+Connection: Close
+Host: RHEL8ACAS.wmss.dt.navy.mil
+Pragma: no-cache
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, image/png, */*
+Accept-Language: en
+Accept-Charset: iso-8859-1,*,utf-8
+
+------------------------------ snip ------------------------------\n","","","","5.3","3.7","4.6","","","Medium","9506;9561;11604;33374;37995","CERT:288308;CERT:867593;CWE:16;CWE:200","","2003/01/23","2024/04/09","","",""
+"11213","CVE-2004-2320","5.0","Medium","192.168.150.17","tcp","8443","HTTP TRACE / TRACK Methods Allowed","Debugging functions are enabled on the remote web server.","The remote web server supports the TRACE and/or TRACK methods. TRACE
+and TRACK are HTTP methods that are used to debug web server
+connections.","Disable these HTTP methods. Refer to the plugin output for more information.","http://www.nessus.org/u?e979b5cb
+http://www.apacheweek.com/issues/03-01-24
+https://download.oracle.com/sunalerts/1000718.1.html","
+To disable these methods, add the following lines for each virtual
+host in your configuration file :
+
+    RewriteEngine on
+    RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK)
+    RewriteRule .* - [F]
+
+Alternatively, note that Apache versions 1.3.34, 2.0.55, and 2.2
+support disabling the TRACE method natively via the 'TraceEnable'
+directive.
+
+Nessus sent the following TRACE request : \n\n------------------------------ snip ------------------------------\nTRACE /Nessus816417898.html HTTP/1.1
+Connection: Close
+Host: RHEL8ACAS.wmss.dt.navy.mil
+Pragma: no-cache
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, image/png, */*
+Accept-Language: en
+Accept-Charset: iso-8859-1,*,utf-8
+
+------------------------------ snip ------------------------------\n\nand received the following response from the remote server :\n\n------------------------------ snip ------------------------------\nHTTP/1.1 200 OK
+Date: Thu, 20 Nov 2025 18:47:32 GMT
+Server: Apache/2.4.37 (Red Hat Enterprise Linux) OpenSSL/1.1.1k
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: message/http
+
+TRACE /Nessus816417898.html HTTP/1.1
+Connection: Close
+Host: RHEL8ACAS.wmss.dt.navy.mil
+Pragma: no-cache
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, image/png, */*
+Accept-Language: en
+Accept-Charset: iso-8859-1,*,utf-8
+
+------------------------------ snip ------------------------------\n","","","","5.3","3.7","4.6","","","Medium","9506;9561;11604;33374;37995","CERT:288308;CERT:867593;CWE:16;CWE:200","","2003/01/23","2024/04/09","","",""
+"11213","CVE-2010-0386","5.0","Medium","192.168.150.17","tcp","8443","HTTP TRACE / TRACK Methods Allowed","Debugging functions are enabled on the remote web server.","The remote web server supports the TRACE and/or TRACK methods. TRACE
+and TRACK are HTTP methods that are used to debug web server
+connections.","Disable these HTTP methods. Refer to the plugin output for more information.","http://www.nessus.org/u?e979b5cb
+http://www.apacheweek.com/issues/03-01-24
+https://download.oracle.com/sunalerts/1000718.1.html","
+To disable these methods, add the following lines for each virtual
+host in your configuration file :
+
+    RewriteEngine on
+    RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK)
+    RewriteRule .* - [F]
+
+Alternatively, note that Apache versions 1.3.34, 2.0.55, and 2.2
+support disabling the TRACE method natively via the 'TraceEnable'
+directive.
+
+Nessus sent the following TRACE request : \n\n------------------------------ snip ------------------------------\nTRACE /Nessus816417898.html HTTP/1.1
+Connection: Close
+Host: RHEL8ACAS.wmss.dt.navy.mil
+Pragma: no-cache
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, image/png, */*
+Accept-Language: en
+Accept-Charset: iso-8859-1,*,utf-8
+
+------------------------------ snip ------------------------------\n\nand received the following response from the remote server :\n\n------------------------------ snip ------------------------------\nHTTP/1.1 200 OK
+Date: Thu, 20 Nov 2025 18:47:32 GMT
+Server: Apache/2.4.37 (Red Hat Enterprise Linux) OpenSSL/1.1.1k
+Connection: close
+Transfer-Encoding: chunked
+Content-Type: message/http
+
+TRACE /Nessus816417898.html HTTP/1.1
+Connection: Close
+Host: RHEL8ACAS.wmss.dt.navy.mil
+Pragma: no-cache
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, image/png, */*
+Accept-Language: en
+Accept-Charset: iso-8859-1,*,utf-8
+
+------------------------------ snip ------------------------------\n","","","","5.3","3.7","4.6","","","Medium","9506;9561;11604;33374;37995","CERT:288308;CERT:867593;CWE:16;CWE:200","","2003/01/23","2024/04/09","","",""
+"12053","","","None","192.168.150.17","tcp","0","Host Fully Qualified Domain Name (FQDN) Resolution","It was possible to resolve the name of the remote host.","Nessus was able to resolve the fully qualified domain name (FQDN) of
+the remote host.","n/a","","
+192.168.150.17 resolves as RHEL8ACAS.wmss.dt.navy.mil.
+","","","","","","","","","None","","","","2004/02/11","2025/03/13","","",""
+"14272","","","None","192.168.150.17","tcp","22","Netstat Portscanner (SSH)","Remote open ports can be enumerated via SSH.","Nessus was able to run 'netstat' on the remote host to enumerate the
+open ports. If 'netstat' is not available, the plugin will attempt to use 'ss'.
+
+See the section 'plugins options' about configuring this plugin.
+
+Note: This plugin will run on Windows (using netstat.exe) in the
+event that the target being scanned is localhost.","n/a","https://en.wikipedia.org/wiki/Netstat","Port 22/tcp was found to be open","","","","","","","","","None","","","","2004/08/15","2025/05/27","","",""
+"14272","","","None","192.168.150.17","tcp","80","Netstat Portscanner (SSH)","Remote open ports can be enumerated via SSH.","Nessus was able to run 'netstat' on the remote host to enumerate the
+open ports. If 'netstat' is not available, the plugin will attempt to use 'ss'.
+
+See the section 'plugins options' about configuring this plugin.
+
+Note: This plugin will run on Windows (using netstat.exe) in the
+event that the target being scanned is localhost.","n/a","https://en.wikipedia.org/wiki/Netstat","Port 80/tcp was found to be open","","","","","","","","","None","","","","2004/08/15","2025/05/27","","",""
+"14272","","","None","192.168.150.17","tcp","139","Netstat Portscanner (SSH)","Remote open ports can be enumerated via SSH.","Nessus was able to run 'netstat' on the remote host to enumerate the
+open ports. If 'netstat' is not available, the plugin will attempt to use 'ss'.
+
+See the section 'plugins options' about configuring this plugin.
+
+Note: This plugin will run on Windows (using netstat.exe) in the
+event that the target being scanned is localhost.","n/a","https://en.wikipedia.org/wiki/Netstat","Port 139/tcp was found to be open","","","","","","","","","None","","","","2004/08/15","2025/05/27","","",""
+"14272","","","None","192.168.150.17","tcp","443","Netstat Portscanner (SSH)","Remote open ports can be enumerated via SSH.","Nessus was able to run 'netstat' on the remote host to enumerate the
+open ports. If 'netstat' is not available, the plugin will attempt to use 'ss'.
+
+See the section 'plugins options' about configuring this plugin.
+
+Note: This plugin will run on Windows (using netstat.exe) in the
+event that the target being scanned is localhost.","n/a","https://en.wikipedia.org/wiki/Netstat","Port 443/tcp was found to be open","","","","","","","","","None","","","","2004/08/15","2025/05/27","","",""
+"14272","","","None","192.168.150.17","tcp","445","Netstat Portscanner (SSH)","Remote open ports can be enumerated via SSH.","Nessus was able to run 'netstat' on the remote host to enumerate the
+open ports. If 'netstat' is not available, the plugin will attempt to use 'ss'.
+
+See the section 'plugins options' about configuring this plugin.
+
+Note: This plugin will run on Windows (using netstat.exe) in the
+event that the target being scanned is localhost.","n/a","https://en.wikipedia.org/wiki/Netstat","Port 445/tcp was found to be open","","","","","","","","","None","","","","2004/08/15","2025/05/27","","",""
+"14272","","","None","192.168.150.17","tcp","514","Netstat Portscanner (SSH)","Remote open ports can be enumerated via SSH.","Nessus was able to run 'netstat' on the remote host to enumerate the
+open ports. If 'netstat' is not available, the plugin will attempt to use 'ss'.
+
+See the section 'plugins options' about configuring this plugin.
+
+Note: This plugin will run on Windows (using netstat.exe) in the
+event that the target being scanned is localhost.","n/a","https://en.wikipedia.org/wiki/Netstat","Port 514/tcp was found to be open","","","","","","","","","None","","","","2004/08/15","2025/05/27","","",""
+"14272","","","None","192.168.150.17","tcp","3389","Netstat Portscanner (SSH)","Remote open ports can be enumerated via SSH.","Nessus was able to run 'netstat' on the remote host to enumerate the
+open ports. If 'netstat' is not available, the plugin will attempt to use 'ss'.
+
+See the section 'plugins options' about configuring this plugin.
+
+Note: This plugin will run on Windows (using netstat.exe) in the
+event that the target being scanned is localhost.","n/a","https://en.wikipedia.org/wiki/Netstat","Port 3389/tcp was found to be open","","","","","","","","","None","","","","2004/08/15","2025/05/27","","",""
+"14272","","","None","192.168.150.17","tcp","8081","Netstat Portscanner (SSH)","Remote open ports can be enumerated via SSH.","Nessus was able to run 'netstat' on the remote host to enumerate the
+open ports. If 'netstat' is not available, the plugin will attempt to use 'ss'.
+
+See the section 'plugins options' about configuring this plugin.
+
+Note: This plugin will run on Windows (using netstat.exe) in the
+event that the target being scanned is localhost.","n/a","https://en.wikipedia.org/wiki/Netstat","Port 8081/tcp was found to be open","","","","","","","","","None","","","","2004/08/15","2025/05/27","","",""
+"14272","","","None","192.168.150.17","tcp","8443","Netstat Portscanner (SSH)","Remote open ports can be enumerated via SSH.","Nessus was able to run 'netstat' on the remote host to enumerate the
+open ports. If 'netstat' is not available, the plugin will attempt to use 'ss'.
+
+See the section 'plugins options' about configuring this plugin.
+
+Note: This plugin will run on Windows (using netstat.exe) in the
+event that the target being scanned is localhost.","n/a","https://en.wikipedia.org/wiki/Netstat","Port 8443/tcp was found to be open","","","","","","","","","None","","","","2004/08/15","2025/05/27","","",""
+"14272","","","None","192.168.150.17","tcp","8834","Netstat Portscanner (SSH)","Remote open ports can be enumerated via SSH.","Nessus was able to run 'netstat' on the remote host to enumerate the
+open ports. If 'netstat' is not available, the plugin will attempt to use 'ss'.
+
+See the section 'plugins options' about configuring this plugin.
+
+Note: This plugin will run on Windows (using netstat.exe) in the
+event that the target being scanned is localhost.","n/a","https://en.wikipedia.org/wiki/Netstat","Port 8834/tcp was found to be open","","","","","","","","","None","","","","2004/08/15","2025/05/27","","",""
+"14272","","","None","192.168.150.17","tcp","8837","Netstat Portscanner (SSH)","Remote open ports can be enumerated via SSH.","Nessus was able to run 'netstat' on the remote host to enumerate the
+open ports. If 'netstat' is not available, the plugin will attempt to use 'ss'.
+
+See the section 'plugins options' about configuring this plugin.
+
+Note: This plugin will run on Windows (using netstat.exe) in the
+event that the target being scanned is localhost.","n/a","https://en.wikipedia.org/wiki/Netstat","Port 8837/tcp was found to be open","","","","","","","","","None","","","","2004/08/15","2025/05/27","","",""
+"14272","","","None","192.168.150.17","udp","514","Netstat Portscanner (SSH)","Remote open ports can be enumerated via SSH.","Nessus was able to run 'netstat' on the remote host to enumerate the
+open ports. If 'netstat' is not available, the plugin will attempt to use 'ss'.
+
+See the section 'plugins options' about configuring this plugin.
+
+Note: This plugin will run on Windows (using netstat.exe) in the
+event that the target being scanned is localhost.","n/a","https://en.wikipedia.org/wiki/Netstat","Port 514/udp was found to be open","","","","","","","","","None","","","","2004/08/15","2025/05/27","","",""
+"14272","","","None","192.168.150.17","udp","5353","Netstat Portscanner (SSH)","Remote open ports can be enumerated via SSH.","Nessus was able to run 'netstat' on the remote host to enumerate the
+open ports. If 'netstat' is not available, the plugin will attempt to use 'ss'.
+
+See the section 'plugins options' about configuring this plugin.
+
+Note: This plugin will run on Windows (using netstat.exe) in the
+event that the target being scanned is localhost.","n/a","https://en.wikipedia.org/wiki/Netstat","Port 5353/udp was found to be open","","","","","","","","","None","","","","2004/08/15","2025/05/27","","",""
+"14272","","","None","192.168.150.17","udp","8082","Netstat Portscanner (SSH)","Remote open ports can be enumerated via SSH.","Nessus was able to run 'netstat' on the remote host to enumerate the
+open ports. If 'netstat' is not available, the plugin will attempt to use 'ss'.
+
+See the section 'plugins options' about configuring this plugin.
+
+Note: This plugin will run on Windows (using netstat.exe) in the
+event that the target being scanned is localhost.","n/a","https://en.wikipedia.org/wiki/Netstat","Port 8082/udp was found to be open","","","","","","","","","None","","","","2004/08/15","2025/05/27","","",""
+"14272","","","None","192.168.150.17","udp","48064","Netstat Portscanner (SSH)","Remote open ports can be enumerated via SSH.","Nessus was able to run 'netstat' on the remote host to enumerate the
+open ports. If 'netstat' is not available, the plugin will attempt to use 'ss'.
+
+See the section 'plugins options' about configuring this plugin.
+
+Note: This plugin will run on Windows (using netstat.exe) in the
+event that the target being scanned is localhost.","n/a","https://en.wikipedia.org/wiki/Netstat","Port 48064/udp was found to be open","","","","","","","","","None","","","","2004/08/15","2025/05/27","","",""
+"14272","","","None","192.168.150.17","udp","56206","Netstat Portscanner (SSH)","Remote open ports can be enumerated via SSH.","Nessus was able to run 'netstat' on the remote host to enumerate the
+open ports. If 'netstat' is not available, the plugin will attempt to use 'ss'.
+
+See the section 'plugins options' about configuring this plugin.
+
+Note: This plugin will run on Windows (using netstat.exe) in the
+event that the target being scanned is localhost.","n/a","https://en.wikipedia.org/wiki/Netstat","Port 56206/udp was found to be open","","","","","","","","","None","","","","2004/08/15","2025/05/27","","",""
+"14272","","","None","192.168.150.17","udp","56723","Netstat Portscanner (SSH)","Remote open ports can be enumerated via SSH.","Nessus was able to run 'netstat' on the remote host to enumerate the
+open ports. If 'netstat' is not available, the plugin will attempt to use 'ss'.
+
+See the section 'plugins options' about configuring this plugin.
+
+Note: This plugin will run on Windows (using netstat.exe) in the
+event that the target being scanned is localhost.","n/a","https://en.wikipedia.org/wiki/Netstat","Port 56723/udp was found to be open","","","","","","","","","None","","","","2004/08/15","2025/05/27","","",""
+"14272","","","None","192.168.150.17","udp","56919","Netstat Portscanner (SSH)","Remote open ports can be enumerated via SSH.","Nessus was able to run 'netstat' on the remote host to enumerate the
+open ports. If 'netstat' is not available, the plugin will attempt to use 'ss'.
+
+See the section 'plugins options' about configuring this plugin.
+
+Note: This plugin will run on Windows (using netstat.exe) in the
+event that the target being scanned is localhost.","n/a","https://en.wikipedia.org/wiki/Netstat","Port 56919/udp was found to be open","","","","","","","","","None","","","","2004/08/15","2025/05/27","","",""
+"14272","","","None","192.168.150.17","udp","60715","Netstat Portscanner (SSH)","Remote open ports can be enumerated via SSH.","Nessus was able to run 'netstat' on the remote host to enumerate the
+open ports. If 'netstat' is not available, the plugin will attempt to use 'ss'.
+
+See the section 'plugins options' about configuring this plugin.
+
+Note: This plugin will run on Windows (using netstat.exe) in the
+event that the target being scanned is localhost.","n/a","https://en.wikipedia.org/wiki/Netstat","Port 60715/udp was found to be open","","","","","","","","","None","","","","2004/08/15","2025/05/27","","",""
+"22964","","","None","192.168.150.17","tcp","22","Service Detection","The remote service could be identified.","Nessus was able to identify the remote service by its banner or by
+looking at the error message it sends when it receives an HTTP
+request.","n/a","","An SSH server is running on this port.","","","","","","","","","None","","","","2007/08/19","2024/03/26","","",""
+"22964","","","None","192.168.150.17","tcp","80","Service Detection","The remote service could be identified.","Nessus was able to identify the remote service by its banner or by
+looking at the error message it sends when it receives an HTTP
+request.","n/a","","A web server is running on this port.","","","","","","","","","None","","","","2007/08/19","2024/03/26","","",""
+"22964","","","None","192.168.150.17","tcp","443","Service Detection","The remote service could be identified.","Nessus was able to identify the remote service by its banner or by
+looking at the error message it sends when it receives an HTTP
+request.","n/a","","A TLSv1.2 server answered on this port.
+","","","","","","","","","None","","","","2007/08/19","2024/03/26","","",""
+"22964","","","None","192.168.150.17","tcp","443","Service Detection","The remote service could be identified.","Nessus was able to identify the remote service by its banner or by
+looking at the error message it sends when it receives an HTTP
+request.","n/a","","A web server is running on this port through TLSv1.2.","","","","","","","","","None","","","","2007/08/19","2024/03/26","","",""
+"22964","","","None","192.168.150.17","tcp","8443","Service Detection","The remote service could be identified.","Nessus was able to identify the remote service by its banner or by
+looking at the error message it sends when it receives an HTTP
+request.","n/a","","A TLSv1.2 server answered on this port.
+","","","","","","","","","None","","","","2007/08/19","2024/03/26","","",""
+"22964","","","None","192.168.150.17","tcp","8443","Service Detection","The remote service could be identified.","Nessus was able to identify the remote service by its banner or by
+looking at the error message it sends when it receives an HTTP
+request.","n/a","","A web server is running on this port through TLSv1.2.","","","","","","","","","None","","","","2007/08/19","2024/03/26","","",""
+"22964","","","None","192.168.150.17","tcp","8834","Service Detection","The remote service could be identified.","Nessus was able to identify the remote service by its banner or by
+looking at the error message it sends when it receives an HTTP
+request.","n/a","","A TLSv1.2 server answered on this port.
+","","","","","","","","","None","","","","2007/08/19","2024/03/26","","",""
+"22964","","","None","192.168.150.17","tcp","8834","Service Detection","The remote service could be identified.","Nessus was able to identify the remote service by its banner or by
+looking at the error message it sends when it receives an HTTP
+request.","n/a","","A web server is running on this port through TLSv1.2.","","","","","","","","","None","","","","2007/08/19","2024/03/26","","",""
+"22964","","","None","192.168.150.17","tcp","8837","Service Detection","The remote service could be identified.","Nessus was able to identify the remote service by its banner or by
+looking at the error message it sends when it receives an HTTP
+request.","n/a","","A TLSv1.2 server answered on this port.
+","","","","","","","","","None","","","","2007/08/19","2024/03/26","","",""
+"22964","","","None","192.168.150.17","tcp","8837","Service Detection","The remote service could be identified.","Nessus was able to identify the remote service by its banner or by
+looking at the error message it sends when it receives an HTTP
+request.","n/a","","A web server is running on this port through TLSv1.2.","","","","","","","","","None","","","","2007/08/19","2024/03/26","","",""
+"24260","","","None","192.168.150.17","tcp","80","HyperText Transfer Protocol (HTTP) Information","Some information about the remote HTTP configuration can be extracted.","This test gives some information about the remote HTTP protocol - the
+version used, whether HTTP Keep-Alive is enabled, etc... 
+
+This test is informational only and does not denote any security
+problem.","n/a","","
+Response Code : HTTP/1.1 403 Forbidden
+
+Protocol version : HTTP/1.1
+HTTP/2 TLS Support: No
+HTTP/2 Cleartext Support: No
+SSL : no
+Keep-Alive : yes
+Options allowed : (Not implemented)
+Headers :
+
+  Date: Thu, 20 Nov 2025 18:48:28 GMT
+  Server: Apache/2.4.37 (Red Hat Enterprise Linux) OpenSSL/1.1.1k
+  Last-Modified: Mon, 12 Jul 2021 19:36:32 GMT
+  ETag: ""133f-5c6f23d09f000""
+  Accept-Ranges: bytes
+  Content-Length: 4927
+  Keep-Alive: timeout=5, max=98
+  Connection: Keep-Alive
+  Content-Type: text/html; charset=UTF-8
+  
+Response Body :
+
+<!DOCTYPE html PUBLIC ""-//W3C//DTD XHTML 1.1//EN"" ""http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"">
+
+<html xmlns=""http://www.w3.org/1999/xhtml"" xml:lang=""en"">
+	<head>
+		<title>Test Page for the HTTP Server on Red Hat Enterprise Linux</title>
+		<meta http-equiv=""Content-Type"" content=""text/html; charset=UTF-8"" />
+		<style type=""text/css"">
+			/*<![CDATA[*/
+			body {
+				background-color: #fff;
+				color: #000;
+				font-size: 0.9em;
+				font-family: sans-serif,helvetica;
+				margin: 0;
+				padding: 0;
+			}
+			:link {
+				color: #c00;
+			}
+			:visited {
+				color: #c00;
+			}
+			a:hover {
+				color: #f50;
+			}
+			h1 {
+				text-align: center;
+				margin: 0;
+				padding: 0.6em 2em 0.4em;
+				background-color: #900;
+				color: #fff;
+				font-weight: normal;
+				font-size: 1.75em;
+				border-bottom: 2px solid #000;
+			}
+			h1 strong {
+				font-weight: bold;
+			}
+			h2 {
+				font-size: 1.1em;
+				font-weight: bold;
+			}
+			hr {
+				display: none;
+			}
+			.content {
+				padding: 1em 5em;
+			}
+			.content-columns {
+				/* Setting relative positioning allows for 
+				absolute positioning for sub-classes */
+				position: relative;
+				padding-top: 1em;
+			}
+			.content-column-left {
+				/* Value for IE/Win; will be overwritten for other browsers */
+				width: 47%;
+				padding-right: 3%;
+				float: left;
+				padding-bottom: 2em;
+			}
+			.content-column-left hr {
+				display: none;
+			}
+			.content-column-right {
+				/* Values for IE/Win; will be overwritten for other browsers */
+				width: 47%;
+				padding-left: 3%;
+				float: left;
+				padding-bottom: 2em;
+			}
+			.content-columns>.content-column-left, .content-columns>.content-column-right {
+				/* Non-IE/Win */
+			}
+			.logos {
+				text-align: center;
+				margin-top: 2em;
+			}
+			img {
+				border: 2px solid #fff;
+				padding: 2px;
+				margin: 2px;
+			}
+			a:hover img {
+				border: 2px solid #f50;
+			}
+			.footer {
+				clear: both;
+				text-align: center;
+				font-size: xx-small;
+			}
+			/*]]>*/
+		</style>
+	</head>
+
+	<body>
+		<h1>Red Hat Enterprise Linux <strong>Test Page</strong></h1>
+
+		<div class=""content"">
+			<div class=""content-middle"">
+				<p>This page is used to test the proper operation of the HTTP server after it has been installed. If you can read this page, it means that the HTTP server installed at this site is working properly.</p>
+			</div>
+			<hr />
+
+			<div class=""content-columns"">
+				<div class=""content-column-left"">
+					<h2>If you are a member of the general public:</h2>
+
+					<p>The fact that you are seeing this page indicates that the website you just visited is either experiencing problems, or is undergoing routine maintenance.</p>
+
+					<p>If you would like to let the administrators of this website know that you've seen this page instead of the page you expected, you should send them e-mail. In general, mail sent to the name ""webmaster"" and directed to the website's domain should reach the appropriate person.</p>
+
+					<p>For example, if you experienced problems while visiting www.example.com, you should send e-mail to ""webmaster@example.com"".</p>
+
+					<p>For information on Red Hat Enterprise Linux, please visit the <a href=""http://www.redhat.com/"">Red Hat, Inc. website</a>. The documentation for Red Hat Enterprise Linux is <a href=""http://www.redhat.com/docs/manuals/enterprise/"">available on the Red Hat, Inc. website</a>.</p>
+					<hr />
+				</div>
+
+				<div class=""content-column-right"">
+					<h2>If you are the website administrator:</h2>
+
+					<p>You may now add content to the webroot directory. Note
+					that until you do so, people visiting your website will see
+					this page, and not your content.</p>
+
+					<p>For systems using the Apache HTTP Server:
+					You may now add content to the directory <tt>/var/www/html/</tt>. Note that until you do so, people visiting your website will see this page, and not your content. To prevent this page from ever being used, follow the instructions in the file <tt>/etc/httpd/conf.d/welcome.conf</tt>.</p>
+
+					<p>For systems using NGINX:
+					You should now put your content in a location of your
+					choice and edit the <code>root</code> configuration directive
+					in the <strong>nginx</strong> configuration file
+					<code>/etc/nginx/nginx.conf</code>.</p>
+
+					<div class=""logos"">
+						<a href=""https://access.redhat.com/products/red-hat-enterprise-linux""><img src= ""/icons/poweredby.png"" alt=""[ Powered by Red Hat Enterprise Linux ]"" /></a>
+						<img src= ""poweredby.png"" alt=""[ Powered by Red Hat Enterprise Linux ]"" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class=""footer"">
+			<a href=""https://apache.org"">Apache&trade;</a> is a registered trademark of <a href=""https://apache.org"">the Apache Software Foundation</a> in the United States and/or other countries.<br />
+			<a href=""https://nginx.com"">NGINX&trade;</a> is a registered trademark of <a href=""https://www.f5.com"">F5 Networks, Inc.</a>.
+	        </div>
+	</body>
+</html>
+","","","","","","","","","None","","","","2007/01/30","2024/02/26","","",""
+"24260","","","None","192.168.150.17","tcp","443","HyperText Transfer Protocol (HTTP) Information","Some information about the remote HTTP configuration can be extracted.","This test gives some information about the remote HTTP protocol - the
+version used, whether HTTP Keep-Alive is enabled, etc... 
+
+This test is informational only and does not denote any security
+problem.","n/a","","
+Response Code : HTTP/1.0 200 OK
+
+Protocol version : HTTP/1.0
+HTTP/2 TLS Support: No
+HTTP/2 Cleartext Support: No
+SSL : yes
+Keep-Alive : no
+Options allowed : (Not implemented)
+Headers :
+
+  Date: Thu, 20 Nov 2025 18:48:28 GMT
+  Server: Apache
+  X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'self' app.pendo.io
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Expect-CT: max-age=31536000
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Vary: x-apikey
+  Cache-Control: no-cache, no-store
+  Pragma: no-cache
+  Content-Length: 2973
+  Connection: close
+  Content-Type: text/html;charset=UTF-8
+  
+Response Body :
+
+<!doctype html><html lang=""en""><head><meta charset=""utf-8""/><meta name=""viewport"" content=""width=device-width""/><meta http-equiv=""X-UA-Compatible"" content=""IE=edge""/><meta http-equiv=""Content-Security-Policy"" content="" default-src 'self'; worker-src 'self' blob:; script-src 'self' 'sha256-rgjEQKGaXD4glC93b+7Pm07q6YvvDWha1YT8acP/JYc=' pendo-io-static.storage.googleapis.com app.pendo.io cdn.pendo.io pendo-static-6165929460760576.storage.googleapis.com data.pendo.io cdn.metarouter.io e.metarouter.io api.amplitude.com cdn.amplitude.com analytics.cloud.coveo.com platform.cloud.coveo.com api.tenable.com tenable.com *.securitycenter-telemetry.tenable.com; connect-src 'self' app.pendo.io data.pendo.io pendo-static-6165929460760576.storage.googleapis.com cdn.metarouter.io e.metarouter.io api.amplitude.com cdn.amplitude.com analytics.cloud.coveo.com platform.cloud.coveo.com api.tenable.com tenable.com *.securitycenter-telemetry.tenable.com; img-src 'self' data: cdn.pendo.io app.pendo.io pendo-static-6165929460760576.storage.googleapis.com data.pendo.io data.securitycenter-telemetry.tenable.com *.securitycenter-telemetry.tenable.com; style-src 'self' 'unsafe-inline' app.pendo.io cdn.pendo.io pendo-static-6165929460760576.storage.googleapis.com *.securitycenter-telemetry.tenable.com; font-src 'self' data:; form-action 'self'; block-all-mixed-content; Upgrade-Insecure-Requests; object-src 'none'""/><title>Loading...</title><link rel=""stylesheet"" media=""screen"" href=""/lib/assets/loader.css""><link rel=""stylesheet"" media=""screen"" href=""/css/style.css""><link rel=""apple-touch-icon"" sizes=""180x180"" href=""/lib/assets/favicons/apple-touch-icon.png""><link rel=""icon"" type=""image/png"" sizes=""32x32"" href=""/lib/assets/favicons/favicon-32x32.png""><link rel=""icon"" type=""image/png"" sizes=""16x16"" href=""/lib/assets/favicons/favicon-16x16.png""><link rel=""manifest"" href=""/lib/assets/favicons/site.webmanifest""><link rel=""mask-icon"" href=""/lib/assets/favicons/safari-pinned-tab.svg"" color=""#00376b""><link rel=""shortcut icon"" href=""/lib/assets/favicons/favicon.ico""><meta name=""msapplication-TileColor"" content=""#2b5797""><meta name=""msapplication-config"" content=""/lib/assets/favicons/browserconfig.xml""><meta name=""theme-color"" content=""#fafafa""><script nonce=""rgjEQKGaXD4glC93b+7Pm07q6YvvDWha1YT8acP/JYc="">window.litNonce = 'ggOCglRCfyuuYIB8viuE1A=='</script><script src=""/lib/telemetry.js""></script><script defer=""defer"" src=""/runtime.d0eba2f167f012ff689b.js""></script><script defer=""defer"" src=""/thirdparty.4ad76962de4b58598504.js""></script><script defer=""defer"" src=""/4145.e4ddbbde631e873a41b6.js""></script><script defer=""defer"" src=""/main.0b22db6ecfe5482eb200.js""></script><link href=""/css/thirdparty.css"" rel=""stylesheet""><link href=""/css/main.css"" rel=""stylesheet""></head><body><div class=""application""><div id=""root""><div id=""root-loader""><img src=""/lib/assets/ajax_loader_big.gif"" alt=""Loading""/></div></div></div><div class=""messages-container""></div></body></html>","","","","","","","","","None","","","","2007/01/30","2024/02/26","","",""
+"24260","","","None","192.168.150.17","tcp","8443","HyperText Transfer Protocol (HTTP) Information","Some information about the remote HTTP configuration can be extracted.","This test gives some information about the remote HTTP protocol - the
+version used, whether HTTP Keep-Alive is enabled, etc... 
+
+This test is informational only and does not denote any security
+problem.","n/a","","
+Response Code : HTTP/1.1 403 Forbidden
+
+Protocol version : HTTP/1.1
+HTTP/2 TLS Support: No
+HTTP/2 Cleartext Support: No
+SSL : yes
+Keep-Alive : yes
+Options allowed : (Not implemented)
+Headers :
+
+  Date: Thu, 20 Nov 2025 18:48:28 GMT
+  Server: Apache/2.4.37 (Red Hat Enterprise Linux) OpenSSL/1.1.1k
+  Last-Modified: Mon, 12 Jul 2021 19:36:32 GMT
+  ETag: ""133f-5c6f23d09f000""
+  Accept-Ranges: bytes
+  Content-Length: 4927
+  Keep-Alive: timeout=5, max=98
+  Connection: Keep-Alive
+  Content-Type: text/html; charset=UTF-8
+  
+Response Body :
+
+<!DOCTYPE html PUBLIC ""-//W3C//DTD XHTML 1.1//EN"" ""http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"">
+
+<html xmlns=""http://www.w3.org/1999/xhtml"" xml:lang=""en"">
+	<head>
+		<title>Test Page for the HTTP Server on Red Hat Enterprise Linux</title>
+		<meta http-equiv=""Content-Type"" content=""text/html; charset=UTF-8"" />
+		<style type=""text/css"">
+			/*<![CDATA[*/
+			body {
+				background-color: #fff;
+				color: #000;
+				font-size: 0.9em;
+				font-family: sans-serif,helvetica;
+				margin: 0;
+				padding: 0;
+			}
+			:link {
+				color: #c00;
+			}
+			:visited {
+				color: #c00;
+			}
+			a:hover {
+				color: #f50;
+			}
+			h1 {
+				text-align: center;
+				margin: 0;
+				padding: 0.6em 2em 0.4em;
+				background-color: #900;
+				color: #fff;
+				font-weight: normal;
+				font-size: 1.75em;
+				border-bottom: 2px solid #000;
+			}
+			h1 strong {
+				font-weight: bold;
+			}
+			h2 {
+				font-size: 1.1em;
+				font-weight: bold;
+			}
+			hr {
+				display: none;
+			}
+			.content {
+				padding: 1em 5em;
+			}
+			.content-columns {
+				/* Setting relative positioning allows for 
+				absolute positioning for sub-classes */
+				position: relative;
+				padding-top: 1em;
+			}
+			.content-column-left {
+				/* Value for IE/Win; will be overwritten for other browsers */
+				width: 47%;
+				padding-right: 3%;
+				float: left;
+				padding-bottom: 2em;
+			}
+			.content-column-left hr {
+				display: none;
+			}
+			.content-column-right {
+				/* Values for IE/Win; will be overwritten for other browsers */
+				width: 47%;
+				padding-left: 3%;
+				float: left;
+				padding-bottom: 2em;
+			}
+			.content-columns>.content-column-left, .content-columns>.content-column-right {
+				/* Non-IE/Win */
+			}
+			.logos {
+				text-align: center;
+				margin-top: 2em;
+			}
+			img {
+				border: 2px solid #fff;
+				padding: 2px;
+				margin: 2px;
+			}
+			a:hover img {
+				border: 2px solid #f50;
+			}
+			.footer {
+				clear: both;
+				text-align: center;
+				font-size: xx-small;
+			}
+			/*]]>*/
+		</style>
+	</head>
+
+	<body>
+		<h1>Red Hat Enterprise Linux <strong>Test Page</strong></h1>
+
+		<div class=""content"">
+			<div class=""content-middle"">
+				<p>This page is used to test the proper operation of the HTTP server after it has been installed. If you can read this page, it means that the HTTP server installed at this site is working properly.</p>
+			</div>
+			<hr />
+
+			<div class=""content-columns"">
+				<div class=""content-column-left"">
+					<h2>If you are a member of the general public:</h2>
+
+					<p>The fact that you are seeing this page indicates that the website you just visited is either experiencing problems, or is undergoing routine maintenance.</p>
+
+					<p>If you would like to let the administrators of this website know that you've seen this page instead of the page you expected, you should send them e-mail. In general, mail sent to the name ""webmaster"" and directed to the website's domain should reach the appropriate person.</p>
+
+					<p>For example, if you experienced problems while visiting www.example.com, you should send e-mail to ""webmaster@example.com"".</p>
+
+					<p>For information on Red Hat Enterprise Linux, please visit the <a href=""http://www.redhat.com/"">Red Hat, Inc. website</a>. The documentation for Red Hat Enterprise Linux is <a href=""http://www.redhat.com/docs/manuals/enterprise/"">available on the Red Hat, Inc. website</a>.</p>
+					<hr />
+				</div>
+
+				<div class=""content-column-right"">
+					<h2>If you are the website administrator:</h2>
+
+					<p>You may now add content to the webroot directory. Note
+					that until you do so, people visiting your website will see
+					this page, and not your content.</p>
+
+					<p>For systems using the Apache HTTP Server:
+					You may now add content to the directory <tt>/var/www/html/</tt>. Note that until you do so, people visiting your website will see this page, and not your content. To prevent this page from ever being used, follow the instructions in the file <tt>/etc/httpd/conf.d/welcome.conf</tt>.</p>
+
+					<p>For systems using NGINX:
+					You should now put your content in a location of your
+					choice and edit the <code>root</code> configuration directive
+					in the <strong>nginx</strong> configuration file
+					<code>/etc/nginx/nginx.conf</code>.</p>
+
+					<div class=""logos"">
+						<a href=""https://access.redhat.com/products/red-hat-enterprise-linux""><img src= ""/icons/poweredby.png"" alt=""[ Powered by Red Hat Enterprise Linux ]"" /></a>
+						<img src= ""poweredby.png"" alt=""[ Powered by Red Hat Enterprise Linux ]"" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class=""footer"">
+			<a href=""https://apache.org"">Apache&trade;</a> is a registered trademark of <a href=""https://apache.org"">the Apache Software Foundation</a> in the United States and/or other countries.<br />
+			<a href=""https://nginx.com"">NGINX&trade;</a> is a registered trademark of <a href=""https://www.f5.com"">F5 Networks, Inc.</a>.
+	        </div>
+	</body>
+</html>
+","","","","","","","","","None","","","","2007/01/30","2024/02/26","","",""
+"24260","","","None","192.168.150.17","tcp","8834","HyperText Transfer Protocol (HTTP) Information","Some information about the remote HTTP configuration can be extracted.","This test gives some information about the remote HTTP protocol - the
+version used, whether HTTP Keep-Alive is enabled, etc... 
+
+This test is informational only and does not denote any security
+problem.","n/a","","
+Response Code : HTTP/1.1 200 OK
+
+Protocol version : HTTP/1.1
+HTTP/2 TLS Support: No
+HTTP/2 Cleartext Support: No
+SSL : yes
+Keep-Alive : no
+Options allowed : (Not implemented)
+Headers :
+
+  Cache-Control: must-revalidate
+  X-Frame-Options: DENY
+  Content-Type: text/html
+  ETag: 862b32cacee1122de9c3c75a392c0d0d
+  Connection: close
+  X-XSS-Protection: 1; mode=block
+  Server: NessusWWW
+  Date: Thu, 20 Nov 2025 18:48:28 GMT
+  X-Content-Type-Options: nosniff
+  Content-Length: 1217
+  Content-Security-Policy: upgrade-insecure-requests; block-all-mixed-content; form-action 'self'; frame-ancestors 'none'; frame-src https://store.tenable.com; default-src 'self'; connect-src 'self' www.tenable.com; script-src 'self' www.tenable.com; img-src 'self' data:; style-src 'self' www.tenable.com; object-src 'none'; base-uri 'self';
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Expect-CT: max-age=0
+  
+Response Body :
+
+<!doctype html>
+<html lang=""en"">
+    <head>
+        <meta http-equiv=""X-UA-Compatible"" content=""IE=edge,chrome=1"" />
+        <meta http-equiv=""Content-Security-Policy"" content=""upgrade-insecure-requests; block-all-mixed-content; form-action 'self'; frame-src https://store.tenable.com; default-src 'self'; connect-src 'self' www.tenable.com; script-src 'self' www.tenable.com; img-src 'self' data:; style-src 'self' www.tenable.com; object-src 'none'; base-uri 'self';"" />
+        <meta name=""viewport"" content=""width=device-width, initial-scale=1"">
+        <meta charset=""utf-8"" />
+        <title>Nessus</title>
+        <link rel=""stylesheet"" href=""nessus6.css?v=1753222061535"" id=""theme-link"" />
+        <link rel=""stylesheet"" href=""tenable_links.css?v=ac05d80f1e3731b79d12103cdf9367fc"" />
+        <link rel=""stylesheet"" href=""wizard_templates.css?v=0e2ae10949ed6782467b3810ccce69c5"" />
+        <!--[if lt IE 11]>
+            <script>
+                window.location = '/unsupported6.html';
+            </script>
+        <![endif]-->
+        <script src=""nessus6.js?v=1753222061535""></script>
+        <script src=""pendo-client.js""></script>
+        <!--Resource-Script-->
+    </head>
+    <body>
+    </body>
+</html>
+","","","","","","","","","None","","","","2007/01/30","2024/02/26","","",""
+"24260","","","None","192.168.150.17","tcp","8837","HyperText Transfer Protocol (HTTP) Information","Some information about the remote HTTP configuration can be extracted.","This test gives some information about the remote HTTP protocol - the
+version used, whether HTTP Keep-Alive is enabled, etc... 
+
+This test is informational only and does not denote any security
+problem.","n/a","","
+Response Code : HTTP/1.0 200 OK
+
+Protocol version : HTTP/1.0
+HTTP/2 TLS Support: No
+HTTP/2 Cleartext Support: No
+SSL : yes
+Keep-Alive : no
+Options allowed : (Not implemented)
+Headers :
+
+  Date: Thu, 20 Nov 2025 18:48:28 GMT
+  Server: Apache
+  X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'self' app.pendo.io
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Expect-CT: max-age=31536000
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Vary: x-apikey
+  Cache-Control: no-cache, no-store
+  Pragma: no-cache
+  Content-Length: 2973
+  Connection: close
+  Content-Type: text/html;charset=UTF-8
+  
+Response Body :
+
+<!doctype html><html lang=""en""><head><meta charset=""utf-8""/><meta name=""viewport"" content=""width=device-width""/><meta http-equiv=""X-UA-Compatible"" content=""IE=edge""/><meta http-equiv=""Content-Security-Policy"" content="" default-src 'self'; worker-src 'self' blob:; script-src 'self' 'sha256-bso2WAQzX+Cah2n98ZEq94oK0RaiLWT383OPb61EWBU=' pendo-io-static.storage.googleapis.com app.pendo.io cdn.pendo.io pendo-static-6165929460760576.storage.googleapis.com data.pendo.io cdn.metarouter.io e.metarouter.io api.amplitude.com cdn.amplitude.com analytics.cloud.coveo.com platform.cloud.coveo.com api.tenable.com tenable.com *.securitycenter-telemetry.tenable.com; connect-src 'self' app.pendo.io data.pendo.io pendo-static-6165929460760576.storage.googleapis.com cdn.metarouter.io e.metarouter.io api.amplitude.com cdn.amplitude.com analytics.cloud.coveo.com platform.cloud.coveo.com api.tenable.com tenable.com *.securitycenter-telemetry.tenable.com; img-src 'self' data: cdn.pendo.io app.pendo.io pendo-static-6165929460760576.storage.googleapis.com data.pendo.io data.securitycenter-telemetry.tenable.com *.securitycenter-telemetry.tenable.com; style-src 'self' 'unsafe-inline' app.pendo.io cdn.pendo.io pendo-static-6165929460760576.storage.googleapis.com *.securitycenter-telemetry.tenable.com; font-src 'self' data:; form-action 'self'; block-all-mixed-content; Upgrade-Insecure-Requests; object-src 'none'""/><title>Loading...</title><link rel=""stylesheet"" media=""screen"" href=""/lib/assets/loader.css""><link rel=""stylesheet"" media=""screen"" href=""/css/style.css""><link rel=""apple-touch-icon"" sizes=""180x180"" href=""/lib/assets/favicons/apple-touch-icon.png""><link rel=""icon"" type=""image/png"" sizes=""32x32"" href=""/lib/assets/favicons/favicon-32x32.png""><link rel=""icon"" type=""image/png"" sizes=""16x16"" href=""/lib/assets/favicons/favicon-16x16.png""><link rel=""manifest"" href=""/lib/assets/favicons/site.webmanifest""><link rel=""mask-icon"" href=""/lib/assets/favicons/safari-pinned-tab.svg"" color=""#00376b""><link rel=""shortcut icon"" href=""/lib/assets/favicons/favicon.ico""><meta name=""msapplication-TileColor"" content=""#2b5797""><meta name=""msapplication-config"" content=""/lib/assets/favicons/browserconfig.xml""><meta name=""theme-color"" content=""#fafafa""><script nonce=""bso2WAQzX+Cah2n98ZEq94oK0RaiLWT383OPb61EWBU="">window.litNonce = 'Fg8DWpLuKr9NqNjaDFryhA=='</script><script src=""/lib/telemetry.js""></script><script defer=""defer"" src=""/runtime.d0eba2f167f012ff689b.js""></script><script defer=""defer"" src=""/thirdparty.4ad76962de4b58598504.js""></script><script defer=""defer"" src=""/4145.e4ddbbde631e873a41b6.js""></script><script defer=""defer"" src=""/main.0b22db6ecfe5482eb200.js""></script><link href=""/css/thirdparty.css"" rel=""stylesheet""><link href=""/css/main.css"" rel=""stylesheet""></head><body><div class=""application""><div id=""root""><div id=""root-loader""><img src=""/lib/assets/ajax_loader_big.gif"" alt=""Loading""/></div></div></div><div class=""messages-container""></div></body></html>","","","","","","","","","None","","","","2007/01/30","2024/02/26","","",""
+"42822","","","None","192.168.150.17","tcp","443","Strict Transport Security (STS) Detection","The remote web server implements Strict Transport Security.","The remote web server implements Strict Transport Security (STS).
+The goal of STS is to make sure that a user does not accidentally
+downgrade the security of his or her browser.
+
+All unencrypted HTTP connections are redirected to HTTPS.  The browser
+is expected to treat all cookies as 'secure' and to close the
+connection in the event of potentially insecure situations.","n/a","http://www.nessus.org/u?2fb3aca6","
+The STS header line is :
+
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+","","","","","","","","","None","","","","2009/11/16","2019/11/22","","",""
+"42822","","","None","192.168.150.17","tcp","8834","Strict Transport Security (STS) Detection","The remote web server implements Strict Transport Security.","The remote web server implements Strict Transport Security (STS).
+The goal of STS is to make sure that a user does not accidentally
+downgrade the security of his or her browser.
+
+All unencrypted HTTP connections are redirected to HTTPS.  The browser
+is expected to treat all cookies as 'secure' and to close the
+connection in the event of potentially insecure situations.","n/a","http://www.nessus.org/u?2fb3aca6","
+The STS header line is :
+
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+","","","","","","","","","None","","","","2009/11/16","2019/11/22","","",""
+"42822","","","None","192.168.150.17","tcp","8837","Strict Transport Security (STS) Detection","The remote web server implements Strict Transport Security.","The remote web server implements Strict Transport Security (STS).
+The goal of STS is to make sure that a user does not accidentally
+downgrade the security of his or her browser.
+
+All unencrypted HTTP connections are redirected to HTTPS.  The browser
+is expected to treat all cookies as 'secure' and to close the
+connection in the event of potentially insecure situations.","n/a","http://www.nessus.org/u?2fb3aca6","
+The STS header line is :
+
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+","","","","","","","","","None","","","","2009/11/16","2019/11/22","","",""
+"42823","","","None","192.168.150.17","tcp","443","Non-compliant Strict Transport Security (STS)","The remote web server implements Strict Transport Security
+incorrectly.","The remote web server implements Strict Transport Security. However,
+it does not respect all the requirements of the STS draft standard.","n/a","http://www.nessus.org/u?2fb3aca6","
+The response from the web server listening on port 80 :
+
+  - does not contain a Status-Code of 301.
+  - does not contain a Location header field.","","","","","","","","","None","","","","2009/11/16","2014/09/19","","",""
+"43111","","","None","192.168.150.17","tcp","80","HTTP Methods Allowed (per directory)","This plugin determines which HTTP methods are allowed on various CGI
+directories.","By calling the OPTIONS method, it is possible to determine which HTTP
+methods are allowed on each directory.
+
+The following HTTP methods are considered insecure:
+  PUT, DELETE, CONNECT, TRACE, HEAD
+
+Many frameworks and languages treat 'HEAD' as a 'GET' request, albeit
+one without any body in the response. If a security constraint was
+set on 'GET' requests such that only 'authenticatedUsers' could
+access GET requests for a particular servlet or resource, it would be
+bypassed for the 'HEAD' version. This allowed unauthorized blind
+submission of any privileged GET request.
+
+As this list may be incomplete, the plugin also tests - if 'Thorough
+tests' are enabled or 'Enable web applications tests' is set to 'yes'
+in the scan policy - various known HTTP methods on each directory and
+considers them as unsupported if it receives a response code of 400,
+403, 405, or 501.
+
+Note that the plugin output is only informational and does not
+necessarily indicate the presence of any security vulnerabilities.","n/a","http://www.nessus.org/u?d9c03a9a
+http://www.nessus.org/u?b019cbdb
+https://www.owasp.org/index.php/Test_HTTP_Methods_(OTG-CONFIG-006)","Based on the response to an OPTIONS request :
+
+  - HTTP methods GET HEAD OPTIONS POST TRACE are allowed on : 
+
+    /
+
+","","","","","","","","","None","","","","2009/12/10","2022/04/11","","",""
+"43111","","","None","192.168.150.17","tcp","8443","HTTP Methods Allowed (per directory)","This plugin determines which HTTP methods are allowed on various CGI
+directories.","By calling the OPTIONS method, it is possible to determine which HTTP
+methods are allowed on each directory.
+
+The following HTTP methods are considered insecure:
+  PUT, DELETE, CONNECT, TRACE, HEAD
+
+Many frameworks and languages treat 'HEAD' as a 'GET' request, albeit
+one without any body in the response. If a security constraint was
+set on 'GET' requests such that only 'authenticatedUsers' could
+access GET requests for a particular servlet or resource, it would be
+bypassed for the 'HEAD' version. This allowed unauthorized blind
+submission of any privileged GET request.
+
+As this list may be incomplete, the plugin also tests - if 'Thorough
+tests' are enabled or 'Enable web applications tests' is set to 'yes'
+in the scan policy - various known HTTP methods on each directory and
+considers them as unsupported if it receives a response code of 400,
+403, 405, or 501.
+
+Note that the plugin output is only informational and does not
+necessarily indicate the presence of any security vulnerabilities.","n/a","http://www.nessus.org/u?d9c03a9a
+http://www.nessus.org/u?b019cbdb
+https://www.owasp.org/index.php/Test_HTTP_Methods_(OTG-CONFIG-006)","Based on the response to an OPTIONS request :
+
+  - HTTP methods GET HEAD OPTIONS POST TRACE are allowed on : 
+
+    /
+
+","","","","","","","","","None","","","","2009/12/10","2022/04/11","","",""
+"48204","","","None","192.168.150.17","tcp","80","Apache HTTP Server Version","It is possible to obtain the version number of the remote Apache HTTP
+server.","The remote host is running the Apache HTTP Server, an open source web
+server. It was possible to read the version number from the banner.","n/a","https://httpd.apache.org/","
+  URL        : http://RHEL8ACAS.wmss.dt.navy.mil/
+  Version    : 2.4.99
+  Source     : Server: Apache/2.4.37 (Red Hat Enterprise Linux) OpenSSL/1.1.1k
+  backported : 1
+  modules    : OpenSSL/1.1.1k
+  os         : ConvertedRedHat
+","","","","","","","","","None","","IAVT:0001-T-0030;IAVT:0001-T-0530","","2010/07/30","2023/08/17","","",""
+"48204","","","None","192.168.150.17","tcp","443","Apache HTTP Server Version","It is possible to obtain the version number of the remote Apache HTTP
+server.","The remote host is running the Apache HTTP Server, an open source web
+server. It was possible to read the version number from the banner.","n/a","https://httpd.apache.org/","
+  URL        : https://RHEL8ACAS.wmss.dt.navy.mil/
+  Version    : unknown
+  Source     : Server: Apache
+  backported : 0
+","","","","","","","","","None","","IAVT:0001-T-0030;IAVT:0001-T-0530","","2010/07/30","2023/08/17","","",""
+"48204","","","None","192.168.150.17","tcp","8443","Apache HTTP Server Version","It is possible to obtain the version number of the remote Apache HTTP
+server.","The remote host is running the Apache HTTP Server, an open source web
+server. It was possible to read the version number from the banner.","n/a","https://httpd.apache.org/","
+  URL        : https://RHEL8ACAS.wmss.dt.navy.mil:8443/
+  Version    : 2.4.99
+  Source     : Server: Apache/2.4.37 (Red Hat Enterprise Linux) OpenSSL/1.1.1k
+  backported : 1
+  modules    : OpenSSL/1.1.1k
+  os         : ConvertedRedHat
+","","","","","","","","","None","","IAVT:0001-T-0030;IAVT:0001-T-0530","","2010/07/30","2023/08/17","","",""
+"48204","","","None","192.168.150.17","tcp","8837","Apache HTTP Server Version","It is possible to obtain the version number of the remote Apache HTTP
+server.","The remote host is running the Apache HTTP Server, an open source web
+server. It was possible to read the version number from the banner.","n/a","https://httpd.apache.org/","
+  URL        : https://RHEL8ACAS.wmss.dt.navy.mil:8837/
+  Version    : unknown
+  Source     : Server: Apache
+  backported : 0
+","","","","","","","","","None","","IAVT:0001-T-0030;IAVT:0001-T-0530","","2010/07/30","2023/08/17","","",""
+"57323","","","None","192.168.150.17","tcp","80","OpenSSL Version Detection","Nessus was able to detect the OpenSSL version.","Nessus was able to extract the OpenSSL version from the web server's
+banner. Note that security patches in many cases are backported and
+the displayed version number does not show the patch level. Using it
+to identify vulnerable software is likely to lead to false detections.","n/a","https://www.openssl.org/","
+  Source             : Apache/2.4.37 (Red Hat Enterprise Linux) OpenSSL/1.1.1k
+  Reported version   : 1.1.1k
+  Backported version : 1.1.1k
+","","","","","","","","","None","","IAVT:0001-T-0682","","2011/12/16","2024/11/14","","",""
+"57323","","","None","192.168.150.17","tcp","8443","OpenSSL Version Detection","Nessus was able to detect the OpenSSL version.","Nessus was able to extract the OpenSSL version from the web server's
+banner. Note that security patches in many cases are backported and
+the displayed version number does not show the patch level. Using it
+to identify vulnerable software is likely to lead to false detections.","n/a","https://www.openssl.org/","
+  Source             : Apache/2.4.37 (Red Hat Enterprise Linux) OpenSSL/1.1.1k
+  Reported version   : 1.1.1k
+  Backported version : 1.1.1k
+","","","","","","","","","None","","IAVT:0001-T-0682","","2011/12/16","2024/11/14","","",""
+"64582","","","None","192.168.150.17","tcp","0","Netstat Connection Information","Nessus was able to parse the results of the 'netstat' command on the
+remote host.","The remote host has listening ports or established connections that
+Nessus was able to extract from the results of the 'netstat' command.
+
+Note: The output for this plugin can be very long, and is not shown by default. To display it, enable verbose reporting in scan settings.","n/a","","","","","","","","","","","None","","","","2013/02/13","2023/05/23","","",""
+"64814","","","None","192.168.150.17","tcp","3389","Terminal Services Use SSL/TLS","The remote Terminal Services use SSL/TLS.","The remote Terminal Services is configured to use SSL/TLS.","n/a","","Subject Name: 
+
+Common Name: XRDP
+
+Issuer Name: 
+
+Common Name: XRDP
+
+Serial Number: 2E 0E 82 9B 04 BB B9 F2 34 32 CB 8D 0D 96 88 AC 73 1C 9D C9 
+
+Version: 3
+
+Signature Algorithm: SHA-256 With RSA Encryption
+
+Not Valid Before: Jan 24 20:53:49 2025 GMT
+Not Valid After: Jan 24 20:53:49 2035 GMT
+
+Public Key Info: 
+
+Algorithm: RSA Encryption
+Key Length: 2048 bits
+Public Key: 00 ED 0A 48 9B 99 DE 17 05 D6 E0 95 CC 50 B9 71 05 C3 A7 1D 
+            E9 47 9D 33 8F 7F C6 4A AB 75 A8 D4 2B 8F 53 BF B7 FA 07 BB 
+            A5 13 A7 E4 A9 68 FA B2 E1 2C 95 9E F7 61 70 1B 7A 53 8B A5 
+            AD 24 D3 86 73 0A EE 7C 06 67 CB 69 66 FD C3 6B BE C9 D9 22 
+            20 4A D6 64 FE 3D A9 4A E6 E6 44 B1 35 A1 06 A3 FC F8 64 AE 
+            F8 E5 23 3F 8F 2A 4B 6A DE 6A D3 FE CA 51 BF 43 CB 21 1D 2A 
+            B7 08 72 4E 45 46 9C F3 81 D2 20 08 74 FB C2 88 3C F1 11 3F 
+            F3 E9 E8 20 04 43 F5 E3 80 D1 56 65 60 5A 22 28 28 88 0A A2 
+            40 D4 7D 92 C1 08 11 B2 7B 42 9C C8 24 B5 66 B2 A3 00 EF 1C 
+            47 74 1B 16 49 E3 C2 9B BD 0C 71 BC D1 4E 93 80 F8 D9 B9 11 
+            44 80 CA 8D 87 51 35 7F D3 83 DB 30 12 31 C5 3F 62 13 11 F7 
+            14 C2 78 6E CC 90 D3 05 AD 32 17 BD BF A9 FF DC 7C 4F 88 FC 
+            5F 2D EE 86 15 B9 52 34 94 B9 96 61 C5 F4 B9 9D 7D 
+Exponent: 01 00 01 
+
+Signature Length: 256 bytes / 2048 bits
+Signature: 00 9A 07 B4 7E 1C 11 DC D7 E8 2A 13 3E A5 35 F6 F0 F3 A8 A0 
+           2B B7 53 C1 CD 1C 7C 72 6D 3C 7B 22 C6 F0 4D 17 DE 7C 4C 1F 
+           9D 40 2B BD EE B7 60 49 C6 57 6C 30 C1 B7 C3 67 EB 32 F4 76 
+           E7 CA 02 8E D5 69 DB 3D DD 99 BC 45 46 01 1E 5A AC 5C 71 13 
+           86 28 99 C4 AA 14 28 A6 23 39 AC 6E CB 74 8F 59 87 0D CA F2 
+           14 DD 53 28 6A 1E 81 CF F8 EB 01 BC 1B C5 BC 53 BF BF CC 3E 
+           79 F0 6E EC A6 4C AD 3F B9 8B 3D 5E 98 49 A3 0A D3 96 5D 56 
+           9E 3B 76 E9 D0 09 37 E6 40 2B 90 2D E8 E0 18 C3 9E 24 46 B6 
+           65 B5 08 38 F9 E5 2C 76 A8 CE 18 A5 DA 7C 13 AD 3B 82 A2 B1 
+           FC 1D F6 A4 DB 76 AD DE D0 F9 97 CA 6B 92 8C 0A DA F1 B0 2E 
+           6C 2F 43 65 C5 F1 18 11 24 4E 55 3E A3 75 53 60 98 E5 C7 14 
+           53 69 74 35 08 3C F0 B6 5A 9D A3 D7 D4 5F F1 0C 58 A8 D3 EC 
+           AE 38 14 00 9F C8 BE 3B A3 42 A8 0F FA 7A 40 73 83 
+
+Extension: Subject Key Identifier(2.5.29.14)
+Critical: 0
+Subject Key Identifier: 72 55 99 34 6F 2C 8F 9A E5 2C E4 B1 AA AA 15 DE D5 D5 99 F2 
+
+
+Extension: Authority Key Identifier(2.5.29.35)
+Critical: 0
+Key Identifier: 72 55 99 34 6F 2C 8F 9A E5 2C E4 B1 AA AA 15 DE D5 D5 99 F2 
+
+
+Extension: Basic Constraints(2.5.29.19)
+Critical: 0
+CA: TRUE
+
+
+","","","","","","","","","None","","","","2013/02/22","2023/07/10","","",""
+"66717","","","None","192.168.150.17","udp","5353","mDNS Detection (Local Network)","It is possible to obtain information about the remote host.","The remote service understands the Bonjour (also known as ZeroConf or
+mDNS) protocol, which allows anyone to uncover information from the
+remote host such as its operating system type and exact version, its
+hostname, and the list of services it is running. 
+
+This plugin attempts to discover mDNS used by hosts residing on the same
+network segment as Nessus.","Filter incoming traffic to UDP port 5353, if desired.","","Nessus was able to extract the following information :
+
+  - mDNS hostname       : RHEL8ACAS.local.
+
+  - Advertised services :
+    o Service name      : RHEL8ACAS._smb._tcp.local.
+      Port number       : 445
+    o Service name      : RHEL8ACAS._device-info._tcp.local.
+      Port number       : 0
+
+","","","","","","","","","None","","","","2013/05/31","2013/05/31","","",""
+"70657","","","None","192.168.150.17","tcp","22","SSH Algorithms and Languages Supported","An SSH server is listening on this port.","This script detects which algorithms and languages are supported by
+the remote service for encrypting communications.","n/a","","
+Nessus negotiated the following encryption algorithm(s) with the server : 
+
+  Client to Server: aes256-ctr
+  Server to Client: aes256-ctr
+
+The server supports the following options for compression_algorithms_server_to_client : 
+
+  none
+
+The server supports the following options for mac_algorithms_client_to_server : 
+
+  hmac-sha1
+  hmac-sha1-etm@openssh.com
+  hmac-sha2-256
+  hmac-sha2-256-etm@openssh.com
+  hmac-sha2-512
+  hmac-sha2-512-etm@openssh.com
+
+The server supports the following options for server_host_key_algorithms : 
+
+  ecdsa-sha2-nistp256
+  rsa-sha2-256
+  rsa-sha2-512
+
+The server supports the following options for encryption_algorithms_client_to_server : 
+
+  aes128-cbc
+  aes128-ctr
+  aes128-gcm@openssh.com
+  aes256-cbc
+  aes256-ctr
+  aes256-gcm@openssh.com
+
+The server supports the following options for mac_algorithms_server_to_client : 
+
+  hmac-sha1
+  hmac-sha1-etm@openssh.com
+  hmac-sha2-256
+  hmac-sha2-256-etm@openssh.com
+  hmac-sha2-512
+  hmac-sha2-512-etm@openssh.com
+
+The server supports the following options for kex_algorithms : 
+
+  diffie-hellman-group-exchange-sha256
+  diffie-hellman-group14-sha256
+  diffie-hellman-group16-sha512
+  diffie-hellman-group18-sha512
+  ecdh-sha2-nistp256
+  ecdh-sha2-nistp384
+  ecdh-sha2-nistp521
+  kex-strict-s-v00@openssh.com
+
+The server supports the following options for compression_algorithms_client_to_server : 
+
+  none
+
+The server supports the following options for encryption_algorithms_server_to_client : 
+
+  aes128-cbc
+  aes128-ctr
+  aes128-gcm@openssh.com
+  aes256-cbc
+  aes256-ctr
+  aes256-gcm@openssh.com
+","","","","","","","","","None","","","","2013/10/28","2025/01/20","","",""
+"70658","CVE-2008-5161","2.6","Low","192.168.150.17","tcp","22","SSH Server CBC Mode Ciphers Enabled","The SSH server is configured to use Cipher Block Chaining.","The SSH server is configured to support Cipher Block Chaining (CBC)
+encryption.  This may allow an attacker to recover the plaintext message
+from the ciphertext. 
+
+Note that this plugin only checks for the options of the SSH server and
+does not check for vulnerable software versions.","Contact the vendor or consult product documentation to disable CBC mode
+cipher encryption, and enable CTR or GCM cipher mode encryption.","","
+The following client-to-server Cipher Block Chaining (CBC) algorithms
+are supported : 
+
+  aes128-cbc
+  aes256-cbc
+
+The following server-to-client Cipher Block Chaining (CBC) algorithms
+are supported : 
+
+  aes128-cbc
+  aes256-cbc
+","","","","3.7","1.9","","","","Low","32319","CERT:958563;CWE:200","","2013/10/28","2023/10/27","","",""
+"100871","","","None","192.168.150.17","tcp","445","Microsoft Windows SMB Versions Supported (remote check)","It was possible to obtain information about the version of SMB running
+on the remote host.","Nessus was able to obtain the version of SMB running on the remote
+host by sending an authentication request to port 139 or 445.
+
+Note that this plugin is a remote check and does not work on agents.","n/a","","
+The remote host supports the following versions of SMB :
+  SMBv2
+","","","","","","","","","None","","","","2017/06/19","2019/11/22","","",""
+"106716","","","None","192.168.150.17","tcp","445","Microsoft Windows SMB2 and SMB3 Dialects Supported (remote check)","It was possible to obtain information about the dialects of SMB2 and SMB3 available
+on the remote host.","Nessus was able to obtain the set of SMB2 and SMB3 dialects running on the remote
+host by sending an authentication request to port 139 or 445.","n/a","","
+The remote host supports the following SMB dialects :
+	_version_  _introduced in windows version_
+	2.1        Windows 7     
+	3.0        Windows 8     
+	3.0.2      Windows 8.1   
+	3.1.1      Windows 10    
+
+The remote host does NOT support the following SMB dialects :
+	_version_  _introduced in windows version_
+	2.0.2      Windows 2008  
+	2.2.2      Windows 8 Beta
+	2.2.4      Windows 8 Beta
+	3.1        Windows 10    
+","","","","","","","","","None","","","","2018/02/09","2020/03/11","","",""
+"149334","","","None","192.168.150.17","tcp","22","SSH Password Authentication Accepted","The SSH server on the remote host accepts password authentication.","The SSH server on the remote host accepts password authentication.","n/a","https://tools.ietf.org/html/rfc4252#section-8","","","","","","","","","","None","","","","2021/05/07","2021/05/07","","",""
+"153588","","","None","192.168.150.17","tcp","22","SSH SHA-1 HMAC Algorithms Enabled","The remote SSH server is configured to enable SHA-1 HMAC algorithms.","The remote SSH server is configured to enable SHA-1 HMAC algorithms.
+
+Although NIST has formally deprecated use of SHA-1 for digital signatures, SHA-1 is still considered secure for HMAC as
+the security of HMAC does not rely on the underlying hash function being resistant to collisions.
+
+Note that this plugin only checks for the options of the remote SSH server.","n/a","","
+The following client-to-server SHA-1 Hash-based Message Authentication Code (HMAC) algorithms are supported : 
+
+  hmac-sha1
+  hmac-sha1-etm@openssh.com
+
+The following server-to-client SHA-1 Hash-based Message Authentication Code (HMAC) algorithms are supported : 
+
+  hmac-sha1
+  hmac-sha1-etm@openssh.com
+","","","","","","","","","None","","","","2021/09/23","2022/04/05","","",""
+"181418","","","None","192.168.150.17","tcp","22","OpenSSH Detection","An OpenSSH-based SSH server was detected on the remote host.","An OpenSSH-based SSH server was detected on the remote host.","n/a","https://www.openssh.com/","
+  Service : ssh
+  Version : 8.0
+  Banner  : SSH-2.0-OpenSSH_8.0
+","","","","","","","","","None","","","","2023/09/14","2025/09/29","","",""
