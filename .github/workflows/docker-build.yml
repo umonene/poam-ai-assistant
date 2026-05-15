@@ -32,7 +32,8 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/poam-ai-assistant:latest
-            docker stop poam-ai-assistant || true
-            docker rm poam-ai-assistant || true
-            docker run -d --name poam-ai-assistant --restart always -p 8501:8501 ${{ secrets.DOCKERHUB_USERNAME }}/poam-ai-assistant:latest
+           script: |
+              sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/poam-ai-assistant:latest
+              sudo docker stop poam-ai-assistant || true
+              sudo docker rm poam-ai-assistant || true
+              sudo docker run -d --name poam-ai-assistant --restart always -p 8501:8501 ${{ secrets.DOCKERHUB_USERNAME }}/poam-ai-assistant:latest
