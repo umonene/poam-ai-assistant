@@ -1,10 +1,25 @@
+version: '3'
+
 services:
+
+  poam-ai-assistant:
+    image: poam-ai-assistant
+    container_name: poam-ai-assistant
+    ports:
+      - "8501:8501"
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: localhost:24224
+        tag: poam-ai-assistant
+
   opensearch-node1:
     image: opensearchproject/opensearch:latest
     container_name: opensearch-node1
     environment:
       - discovery.type=single-node
-      - DISABLE_SECURITY_PLUGIN=true
+      - plugins.security.disabled=true
+      - OPENSEARCH_INITIAL_ADMIN_PASSWORD=Admin123!
     ports:
       - "9200:9200"
       - "9600:9600"
@@ -15,8 +30,7 @@ services:
     ports:
       - "5601:5601"
     environment:
-      - OPENSEARCH_HOSTS=["http://opensearch-node1:9200"]
-      - DISABLE_SECURITY_DASHBOARDS_PLUGIN=true
+      OPENSEARCH_HOSTS: '["http://opensearch-node1:9200"]'
 
   fluent-bit:
     image: fluent/fluent-bit:latest
@@ -25,5 +39,3 @@ services:
       - "24224:24224"
     volumes:
       - ./fluent-bit.conf:/fluent-bit/etc/fluent-bit.conf
-    depends_on:
-      - opensearch-node1
