@@ -1,36 +1,4 @@
-version: '3'
-
 services:
-
-  poam-ai-assistant:
-    image: poam-ai-assistant
-    container_name: poam-ai-assistant
-    ports:
-      - "8501:8501"
-    logging:
-      driver: fluentd
-      options:
-        fluentd-address: localhost:24224
-        tag: poam-ai-assistant
-
-  opensearch-node1:
-    image: opensearchproject/opensearch:latest
-    container_name: opensearch-node1
-    environment:
-      - discovery.type=single-node
-      - plugins.security.disabled=true
-      - OPENSEARCH_INITIAL_ADMIN_PASSWORD=Admin123!
-    ports:
-      - "9200:9200"
-      - "9600:9600"
-
-  opensearch-dashboards:
-    image: opensearchproject/opensearch-dashboards:latest
-    container_name: opensearch-dashboards
-    ports:
-      - "5601:5601"
-    environment:
-      OPENSEARCH_HOSTS: '["http://opensearch-node1:9200"]'
 
   fluent-bit:
     image: fluent/fluent-bit:latest
@@ -39,3 +7,41 @@ services:
       - "24224:24224"
     volumes:
       - ./fluent-bit.conf:/fluent-bit/etc/fluent-bit.conf
+
+  opensearch-node1:
+    image: opensearchproject/opensearch:2.11.1
+    container_name: opensearch-node1
+    environment:
+      - discovery.type=single-node
+      - DISABLE_SECURITY_PLUGIN=true
+      - OPENSEARCH_JAVA_OPTS=-Xms512m -Xmx512m
+    ports:
+      - "9200:9200"
+      - "9600:9600"
+
+  opensearch-dashboards:
+    image: opensearchproject/opensearch-dashboards:2.11.1
+    container_name: opensearch-dashboards
+    ports:
+      - "5601:5601"
+    environment:
+      OPENSEARCH_HOSTS: '["http://opensearch-node1:9200"]'
+      DISABLE_SECURITY_DASHBOARDS_PLUGIN: "true"
+      I18N_LOCALE: "en-us"
+      OPENSEARCH_DASHBOARDS_I18N_LOCALE: "en-us"
+    depends_on:
+      - opensearch-node1
+
+  poam-ai-assistant:
+    image: poam-ai-assistant
+    container_name: poam-ai-assistant
+    ports:
+      - "8501:8501"
+    depends_on:
+      - fluent-bit
+    logging:
+      driver: fluentd
+      options:
+        fluentd-address: "127.0.0.1:24224"
+        fluentd-async: "true"
+        tag: "poam-ai-assistant"
