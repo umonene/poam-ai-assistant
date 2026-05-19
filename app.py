@@ -3,6 +3,27 @@ import io
 import os
 
 import streamlit as st
+
+APP_USERNAME = "demo"
+APP_PASSWORD = "taemintech"
+
+if "authenticated" not in st.session_state:
+    st.session_state.authenticated = False
+
+if not st.session_state.authenticated:
+    st.title("POA&M AI Assistant Login")
+
+    username = st.text_input("Username")
+    password = st.text_input("Password", type="password")
+
+    if st.button("Login"):
+        if username == APP_USERNAME and password == APP_PASSWORD:
+            st.session_state.authenticated = True
+            st.rerun()
+        else:
+            st.error("Invalid username or password")
+
+    st.stop()
 import pandas as pd
 from dotenv import load_dotenv
 from openai import OpenAI
